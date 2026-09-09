@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="徐毅凡的计算机视觉、AI Agent 与车载智能座舱项目作品集" />
+    <meta name="theme-color" content="#ffffff" />
+    <title>徐毅凡｜计算机视觉与 AI 软件开发</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav class="nav-shell" aria-label="主导航">
+      <a class="monogram" href="#top" aria-label="返回首页">XY</a>
+      <div class="nav-links">
+        <a href="#experience">经历</a>
+        <a href="#projects">项目</a>
+        <a href="#skills">技能</a>
+      </div>
+      <a class="nav-contact" href="mailto:xef2354@163.com">联系我</a>
+    </nav>
+
+    <main>
+      <section class="hero section-shell" id="top">
+        <div class="hero-copy">
+          <p class="eyebrow">上海 · 电子信息硕士</p>
+          <h1>计算机视觉与<br />AI 软件开发</h1>
+          <p class="hero-intro">我是徐毅凡，专注车载计算机视觉、端侧模型部署与 AI Agent 应用，希望把算法能力转化为稳定、可落地的产品体验。</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#projects">查看项目</a>
+            <a class="button button-secondary" href="https://github.com/xef0805" target="_blank" rel="noreferrer">GitHub</a>
+          </div>
+        </div>
+        <figure class="portrait-wrap">
+          <div class="portrait-glow" aria-hidden="true"></div>
+          <img src="public/profile.jpg" alt="徐毅凡证件照" class="portrait" width="900" height="1200" />
+          <figcaption>徐毅凡 · AI Software Engineer</figcaption>
+        </figure>
+      </section>
+
+      <section class="stats section-shell" aria-label="项目成果">
+        <div class="stat"><strong>&lt; 200 ms</strong><span>车载视觉全流程推理</span></div>
+        <div class="stat"><strong>90%+</strong><span>光照预测准确率</span></div>
+        <div class="stat"><strong>量产落地</strong><span>奇瑞与蔚来多款车型</span></div>
+      </section>
+
+      <section class="content-section section-shell" id="experience">
+        <div class="section-heading">
+          <p class="section-kicker">Experience</p>
+          <h2>实习经历</h2>
+        </div>
+        <div class="timeline">
+          <article class="timeline-item">
+            <div class="timeline-date">2026.01 - 2026.07</div>
+            <div class="timeline-content">
+              <h3>德国大陆汽车电子 Aumovio</h3>
+              <p class="role">AI 软件开发实习生</p>
+              <ul>
+                <li>独立推进车载路口与行人检测模型的选型、适配、接口调用及端侧部署，满足智能前灯系统的实时感知需求。</li>
+                <li>搭建大语言模型驱动的语音功能调用链路，将自然语言指令映射到车载投影灯光与娱乐功能。</li>
+                <li>开发 PDF 需求解析 Agent，自动完成格式转换、关键信息提取和需求梳理，减少重复整理工作。</li>
+                <li>参与车载投影 AI 互动游戏开发，完成核心逻辑、CANoe 通信控制、动画渲染及大模型能力接入。</li>
+              </ul>
+            </div>
+          </article>
+          <article class="timeline-item">
+            <div class="timeline-date">2025.09 - 2025.11</div>
+            <div class="timeline-content">
+              <h3>上海寻序智能有限公司</h3>
+              <p class="role">计算机视觉实习生</p>
+              <ul>
+                <li>围绕智能座舱自适应调光，独立完成光照辐射预测模型搭建、数据集适配、训练与测试。</li>
+                <li>针对复杂光照和动态环境干扰，持续开展超参数、特征和误差迭代优化。</li>
+                <li>模型在 MAE@100 指标下预测准确率稳定在 90% 以上，并应用于奇瑞、蔚来多款量产车型。</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="projects-section" id="projects">
+        <div class="section-shell">
+          <div class="section-heading project-heading">
+            <p class="section-kicker">Selected work</p>
+            <h2>代表项目</h2>
+            <p>从视觉感知、端侧部署到大模型应用，关注真实场景中的稳定性、时延与交互体验。</p>
+          </div>
+          <div class="project-grid">
+            <article class="project-card">
+              <div class="project-topline"><span>01</span><span>Aumovio · 计算机视觉</span></div>
+              <h3>单目路口与行人检测</h3>
+              <p>负责模型选型、适配、接口调用与端侧部署，针对卡顿、识别延迟和误检优化推理链路，实现 200 ms 内完成画面分析与结果输出。</p>
+              <div class="tag-row"><span>PyTorch</span><span>目标检测</span><span>端侧部署</span></div>
+            </article>
+            <article class="project-card">
+              <div class="project-topline"><span>02</span><span>Aumovio · AI Agent</span></div>
+              <h3>车载语音功能调用</h3>
+              <p>拆解语音需求，完成 Function Call 适配与 Skill 技能库对接，贯通语音识别、语义分析和车载投影娱乐功能调用。</p>
+              <div class="tag-row"><span>LLM</span><span>Function Call</span><span>Skill</span></div>
+            </article>
+            <article class="project-card">
+              <div class="project-topline"><span>03</span><span>Aumovio · 工程效率</span></div>
+              <h3>PDF 需求解析 Agent</h3>
+              <p>独立开发自动化脚本，将客户需求 PDF 批量转换为标准化 Markdown，并提取核心需求、技术指标和功能要求。</p>
+              <div class="tag-row"><span>Python</span><span>Agent</span><span>Markdown</span></div>
+            </article>
+            <article class="project-card">
+              <div class="project-topline"><span>04</span><span>上海寻序智能 · 计算机视觉</span></div>
+              <h3>座舱光照辐射预测</h3>
+              <p>独立完成模型搭建、数据集适配与训练，通过超参数、特征和误差迭代提升复杂光照及动态场景下的适配性。</p>
+              <div class="tag-row"><span>CNN</span><span>模型训练</span><span>量产应用</span></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section section-shell" id="skills">
+        <div class="section-heading split-heading">
+          <div><p class="section-kicker">Profile</p><h2>教育与技能</h2></div>
+          <p>上海大学电子信息硕士在读，研究方向为深度学习与大模型。本科毕业于湖南理工大学，GPA 4.1/5.0，Top 10%。</p>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-row"><span>编程与框架</span><strong>Python · C · PyTorch · STM32</strong></div>
+          <div class="skill-row"><span>算法与模型</span><strong>CNN · Transformer · 目标检测 · 语义理解</strong></div>
+          <div class="skill-row"><span>AI 工程</span><strong>AI Agent · Function Call · 大模型微调与应用</strong></div>
+          <div class="skill-row"><span>工具与语言</span><strong>CANoe · MATLAB · LaTeX · CET-6</strong></div>
+        </div>
+        <div class="honors"><span>荣誉</span><p>湖南省“挑战杯”二等奖 · 2025、2026 年研究生二等奖学金 · 2024 届优秀本科毕业生</p></div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="section-shell footer-inner">
+        <p>徐毅凡</p>
+        <a href="mailto:xef2354@163.com">xef2354@163.com</a>
+        <span>© 2026</span>
+      </div>
+    </footer>
+  </body>
+</html>
