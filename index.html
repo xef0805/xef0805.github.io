@@ -16,7 +16,10 @@
         <a href="#projects">项目</a>
         <a href="#skills">技能</a>
       </div>
-      <a class="nav-contact" href="mailto:xef2354@163.com">联系我</a>
+      <div class="nav-contact" aria-label="联系方式">
+        <a href="mailto:xef2354@163.com"><span>邮箱</span> xef2354@163.com</a>
+        <a href="tel:+8618270372354"><span>电话</span> 182-7037-2354</a>
+      </div>
     </nav>
 
     <main>
@@ -85,31 +88,54 @@
             <p>从视觉感知、端侧部署到大模型应用，关注真实场景中的稳定性、时延与交互体验。</p>
           </div>
           <div class="project-grid">
-            <article class="project-card">
+            <article class="project-card" role="button" tabindex="0" aria-expanded="false" aria-controls="project-1-details" data-project-card>
               <div class="project-topline"><span>01</span><span>Aumovio · 计算机视觉</span></div>
               <h3>单目路口与行人检测</h3>
               <p>负责模型选型、适配、接口调用与端侧部署，针对卡顿、识别延迟和误检优化推理链路，实现 200 ms 内完成画面分析与结果输出。</p>
               <div class="tag-row"><span>PyTorch</span><span>目标检测</span><span>端侧部署</span></div>
+              <div class="project-details" id="project-1-details" hidden>
+                <p><strong>应用场景</strong> 智能前灯根据路口、行人及过街意图调整启闭、远近光切换和防眩目策略。</p>
+                <p><strong>个人工作</strong> 独立推进模型选型、接口适配和端侧部署，定位画面卡顿、识别延迟与场景误检问题。</p>
+                <p><strong>项目结果</strong> 将全流程画面分析和结果输出控制在 200 ms 内，为车灯控制提供实时感知结果。</p>
+              </div>
+              <span class="project-toggle" aria-hidden="true">查看详情 <span>＋</span></span>
             </article>
-            <article class="project-card">
+            <article class="project-card" role="button" tabindex="0" aria-expanded="false" aria-controls="project-2-details" data-project-card>
               <div class="project-topline"><span>02</span><span>Aumovio · AI Agent</span></div>
               <h3>车载语音功能调用</h3>
               <p>拆解语音需求，完成 Function Call 适配与 Skill 技能库对接，贯通语音识别、语义分析和车载投影娱乐功能调用。</p>
               <div class="tag-row"><span>LLM</span><span>Function Call</span><span>Skill</span></div>
+              <div class="project-details" id="project-2-details" hidden>
+                <p><strong>目标</strong> 让驾驶员通过自然语言直接调用车载投影灯光与娱乐功能。</p>
+                <p><strong>个人工作</strong> 拆解语音需求，完成 Function Call 适配及 Skill 技能库对接，串联语音识别、语义分析和功能执行。</p>
+                <p><strong>扩展应用</strong> 将大模型能力接入车载投影互动游戏，支持语音识别、语音合成和模型对弈。</p>
+              </div>
+              <span class="project-toggle" aria-hidden="true">查看详情 <span>＋</span></span>
             </article>
-            <article class="project-card">
+            <article class="project-card" role="button" tabindex="0" aria-expanded="false" aria-controls="project-3-details" data-project-card>
               <div class="project-topline"><span>03</span><span>Aumovio · 工程效率</span></div>
               <h3>PDF 需求解析 Agent</h3>
               <p>独立开发自动化脚本，将客户需求 PDF 批量转换为标准化 Markdown，并提取核心需求、技术指标和功能要求。</p>
               <div class="tag-row"><span>Python</span><span>Agent</span><span>Markdown</span></div>
+              <div class="project-details" id="project-3-details" hidden>
+                <p><strong>问题</strong> 客户需求文档格式不统一，人工转换和梳理耗时且容易遗漏重点。</p>
+                <p><strong>个人工作</strong> 独立开发自动化脚本和触发逻辑，完成 PDF 批量转换、标准化整理及关键信息提取。</p>
+                <p><strong>输出</strong> 自动生成 Markdown 需求文档，集中呈现核心需求、技术指标和功能要求。</p>
+              </div>
+              <span class="project-toggle" aria-hidden="true">查看详情 <span>＋</span></span>
             </article>
-            <article class="project-card">
+            <article class="project-card" role="button" tabindex="0" aria-expanded="false" aria-controls="project-4-details" data-project-card>
               <div class="project-topline"><span>04</span><span>上海寻序智能 · 计算机视觉</span></div>
               <h3>座舱光照辐射预测</h3>
               <p>独立完成模型搭建、数据集适配与训练，通过超参数、特征和误差迭代提升复杂光照及动态场景下的适配性。</p>
               <div class="tag-row"><span>CNN</span><span>模型训练</span><span>量产应用</span></div>
+              <div class="project-details" id="project-4-details" hidden>
+                <p><strong>应用场景</strong> 根据摄像头画面与车机实时数据预测主副驾驶阳光辐射值，为屏幕和遮阳系统调节提供依据。</p>
+                <p><strong>个人工作</strong> 独立完成模型搭建、数据集适配、训练与测试，并持续迭代超参数、特征和误差分析。</p>
+                <p><strong>项目结果</strong> MAE@100 指标下预测准确率稳定在 90% 以上，应用于奇瑞、蔚来多款量产车型。</p>
+              </div>
+              <span class="project-toggle" aria-hidden="true">查看详情 <span>＋</span></span>
             </article>
-          </div>
         </div>
       </section>
 
@@ -132,8 +158,29 @@
       <div class="section-shell footer-inner">
         <p>徐毅凡</p>
         <a href="mailto:xef2354@163.com">xef2354@163.com</a>
+        <a href="tel:+8618270372354">182-7037-2354</a>
         <span>© 2026</span>
       </div>
     </footer>
+    <script>
+      document.querySelectorAll("[data-project-card]").forEach((card) => {
+        const details = document.getElementById(card.getAttribute("aria-controls"));
+        const toggle = card.querySelector(".project-toggle");
+
+        const setExpanded = (expanded) => {
+          card.setAttribute("aria-expanded", String(expanded));
+          details.hidden = !expanded;
+          toggle.firstChild.textContent = expanded ? "收起详情 " : "查看详情 ";
+        };
+
+        card.addEventListener("click", () => setExpanded(card.getAttribute("aria-expanded") !== "true"));
+        card.addEventListener("keydown", (event) => {
+          if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            setExpanded(card.getAttribute("aria-expanded") !== "true");
+          }
+        });
+      });
+    </script>
   </body>
 </html>
