@@ -132,7 +132,6 @@
               <h3>统一快递取件 App（ParcelHub）</h3>
               <p>将官方待取清单与用户导入的取件短信集中管理的 iOS 助手，统一查看待取包裹、取件凭证和历史记录，减少在不同入口反复查找信息的操作。</p>
               <div class="tag-row"><span>SwiftUI</span><span>WebKit</span><span>数据合并</span></div>
-              <a class="project-repository" href="https://github.com/xef0805/ParcelHub" target="_blank" rel="noopener noreferrer" aria-label="统一快递取件 App（ParcelHub）的 GitHub 仓库（私有）↗">GitHub 仓库（私有）↗</a>
               <div class="project-details" id="project-3-details" hidden>
                 <p><strong>方案与接入</strong> 先核实各平台可读取的数据及跳转方式，再基于 SwiftUI 与 WebKit 开发应用。读取用户登录后的淘宝官方待取清单，并在官方页面展示动态身份码；其他驿站保留小程序入口，按实际接入能力提供功能。</p>
                 <p><strong>识别与去重</strong> 对用户粘贴的取件短信进行本机解析，提取快递公司、地点及取件码。优先按快递公司与完整运单号合并跨来源包裹，同时保留各来源的凭证；信息不足时采用保守匹配，存在歧义则提示补全。</p>
