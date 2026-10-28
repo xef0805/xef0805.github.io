@@ -105,9 +105,11 @@ a { color: inherit; text-decoration: none; }
   .nav-shell { grid-template-columns: 1fr auto; padding: 0 18px; }
   .nav-links { display: none; }
   .nav-contact { flex-direction: column; gap: 2px; align-items: flex-end; font-size: 12px; }
-  .hero { grid-template-columns: 1fr; min-height: auto; gap: 50px; padding: 72px 0 76px; }
+  .hero { grid-template-columns: 1fr; min-height: auto; gap: 28px; padding: 48px 0; }
   .hero h1 { font-size: clamp(48px, 13vw, 70px); }
-  .portrait-wrap { justify-self: center; width: min(86vw, 430px); }
+  .portrait-wrap { justify-self: center; width: 180px; }
+  .portrait { height: auto; border-radius: 18px; }
+  .portrait-wrap figcaption { margin-top: 10px; font-size: 12px; }
   .stats { grid-template-columns: 1fr; }
   .stat { min-height: 112px; border-right: 0; border-bottom: 1px solid var(--line); }
   .stat:last-child { border-bottom: 0; }
@@ -125,7 +127,6 @@ a { color: inherit; text-decoration: none; }
   .hero h1 { font-size: 44px; }
   .hero-intro { font-size: 17px; }
   .hero-actions { flex-direction: column; align-items: stretch; }
-  .portrait { border-radius: 28px; }
   .project-card { padding: 24px; border-radius: 22px; }
   .project-topline { flex-direction: column; gap: 6px; }
   .project-card h3 { margin-top: 32px; }
