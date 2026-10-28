@@ -88,50 +88,57 @@
             <article class="project-card" role="button" tabindex="0" aria-expanded="false" aria-controls="project-1-details" data-project-card>
               <div class="project-topline"><span>01</span><span>Aumovio · 计算机视觉</span></div>
               <h3>单目路口与行人检测</h3>
-              <p>完成模型选型、接口适配与端侧部署，识别路口、行人及过街意图，为智能前灯远近光切换与防眩目控制提供感知结果；优化推理链路，实现 200 ms 内完成全流程画面分析与结果输出。</p>
-              <div class="tag-row"><span>目标检测</span><span>接口适配</span><span>端侧部署</span></div>
+              <p>面向智能前灯控制的单目视觉感知模块，识别道路中的路口、行人与过街意图，为远近光切换及防眩目控制提供场景信息。</p>
+              <div class="tag-row"><span>视觉感知</span><span>接口集成</span><span>实时分析</span></div>
               <div class="project-details" id="project-1-details" hidden>
-                <p><strong>应用场景</strong> 识别路口、行人及过街意图，为智能前灯远近光切换与防眩目控制提供感知结果。</p>
-                <p><strong>个人工作</strong> 完成模型选型、接口适配与端侧部署，优化推理链路中的卡顿、延迟与误检问题。</p>
-                <p><strong>项目结果</strong> 将全流程画面分析和结果输出控制在 200 ms 内，为车灯控制提供实时感知结果。</p>
+                <p><strong>处理链路</strong> 以单目摄像头画面为输入，经图像编码与接口调用送入视觉模型，再解析返回的 JSON，将道路场景信息整理为后续控制模块可用的结构化结果。视觉大模型运行于公司服务器，通过接口与应用侧交互。</p>
+                <p><strong>模型适配</strong> 围绕路口、行人及过街意图识别完成模型选型，衔接图像输入、模型调用与结果输出，处理模型接口和业务模块之间的数据格式适配。</p>
+                <p><strong>联调与优化</strong> 排查画面处理、接口调用和结果解析过程中的卡顿与延迟，结合实际道路画面定位误检问题，持续调整推理链路及集成方式。</p>
+                <p><strong>个人职责与结果</strong> 承担视觉模型选型、接口适配和感知软件集成调试；优化后，画面分析至结果输出的全流程耗时控制在 200 ms 内，为后续车灯控制提供感知依据。</p>
               </div>
               <span class="project-toggle" aria-hidden="true">查看详情 <span>＋</span></span>
             </article>
             <article class="project-card" role="button" tabindex="0" aria-expanded="false" aria-controls="project-4-details" data-project-card>
               <div class="project-topline"><span>02</span><span>上海寻序智能 · 计算机视觉</span></div>
               <h3>座舱光照辐射预测</h3>
-              <p>构建视觉预测模型，估计驾驶位与副驾驶位阳光辐射值，为遮阳系统调节提供算法支持；预测准确率在MAE@100 指标下稳定超过 90%，算法已应用于奇瑞、蔚来多款量产车型。</p>
-              <div class="tag-row"><span>视觉预测</span><span>模型训练</span><span>量产应用</span></div>
+              <p>结合车载摄像头与车机数据，分别估计驾驶位和副驾驶位的阳光辐射，为智能座舱遮阳调节提供输入，算法已应用于奇瑞、蔚来多款量产车型。</p>
+              <div class="tag-row"><span>特征融合</span><span>回归预测</span><span>车端部署</span></div>
               <div class="project-details" id="project-4-details" hidden>
-                <p><strong>应用场景</strong> 结合车载摄像头画面与车机实时数据，估计驾驶位与副驾驶位阳光辐射值，为遮阳系统调节提供算法支持。</p>
-                <p><strong>个人工作</strong> 独立完成模型搭建、训练与测试，通过超参数调优、特征优化及预测误差分析，提升复杂光照与动态场景下的预测表现。</p>
-                <p><strong>项目结果</strong> MAE@100 指标下预测准确率稳定在 90% 以上，应用于奇瑞、蔚来多款量产车型。</p>
+                <p><strong>输入与建模</strong> 从摄像头画面的不同区域提取光照特征，与车机传感器特征组合为模型输入，构建双输出回归模型，分别估计驾驶位和副驾驶位的辐射值。</p>
+                <p><strong>训练与调优</strong> 独立完成模型搭建、训练与测试，围绕特征处理和超参数开展优化；分别检查两个座位的预测偏差，避免仅用整体表现掩盖单个座位的问题。</p>
+                <p><strong>误差分析</strong> 针对复杂光照与动态场景，对照预测值和参考值检查误差样本，分析不同场景下的偏差，再调整特征与模型参数，复查调整后的预测表现。</p>
+                <p><strong>部署落地</strong> 将训练后的模型导出为 ONNX，结合 INT8 量化适配车端本地运行，衔接模型输入输出与应用数据，完成从离线训练到车端推理的集成。</p>
+                <p><strong>验证口径</strong> 项目中“MAE@100 超过 90%”表示绝对误差不超过 100 的样本占比超过 90%，用于衡量预测落入指定误差范围的情况。</p>
               </div>
               <span class="project-toggle" aria-hidden="true">查看详情 <span>＋</span></span>
             </article>
             <article class="project-card" role="button" tabindex="0" aria-expanded="false" aria-controls="project-2-details" data-project-card>
               <div class="project-topline"><span>03</span><span>个人项目 · 3D 游戏开发</span></div>
-              <h3>火箭助推跑车模拟游戏</h3>
-              <p>将驾驶玩法拆解为车辆运动、喷气控制与动作回放等模块，借助 AI 编程基于 Godot 完成开发，支持倒挂行驶、空中翻滚及自由视角回放；围绕操控手感与镜头交互持续调试，通过多帧率回归测试验证功能，并配置 GitHub Actions 自动测试与构建，完成 Windows 版本开源发布。</p>
-              <div class="tag-row"><span>Godot</span><span>物理操控</span><span>自动化构建</span></div>
-              <a class="project-repository" href="https://github.com/xef0805/Roadster2-simulator" target="_blank" rel="noopener noreferrer" aria-label="火箭助推跑车模拟游戏的 GitHub 仓库">GitHub 仓库 ↗</a>
+              <h3>Tesla Roadster 2 模拟驾驶游戏</h3>
+              <p>以 Tesla Roadster 2 为原型的非官方 3D 驾驶模拟游戏，在夜间测试场体验倒挂道路、喷气起跳与飞越车队，并可从不同机位回看完整动作。</p>
+              <div class="tag-row"><span>Godot</span><span>游戏物理</span><span>自动化构建</span></div>
+              <a class="project-repository" href="https://github.com/xef0805/Roadster2-simulator" target="_blank" rel="noopener noreferrer" aria-label="Tesla Roadster 2 模拟驾驶游戏的 GitHub 仓库">GitHub 仓库 ↗</a>
               <div class="project-details" id="project-2-details" hidden>
-                <p><strong>需求与设计</strong> 将驾驶玩法拆解为车辆运动、喷气控制与动作回放模块，借助 AI 编程基于 Godot 完成开发。</p>
-                <p><strong>功能与调试</strong> 实现倒挂行驶、空中翻滚及自由视角回放，围绕操控手感与镜头交互持续调试。</p>
-                <p><strong>验证与交付</strong> 通过多帧率回归测试验证功能，配置 GitHub Actions 自动测试与构建，完成 Windows 版本开源发布。</p>
+                <p><strong>需求与开发</strong> 将玩法拆解为车辆运动、喷气控制、测试场景和动作回放模块，借助 AI 编程基于 Godot 完成开发，结合实际试玩反馈持续调整操控方式与镜头交互。</p>
+                <p><strong>车辆与喷气</strong> 基于刚体运动处理轮地接触，用悬挂弹簧与阻尼模拟支撑和缓冲，并计算轮胎受力与路面吸附；喷气对车身施加升力和翻滚力矩，支持起跳、空中姿态调整与落地缓冲。车辆和喷气参数用于游戏玩法，不代表 Tesla 真实车辆性能。</p>
+                <p><strong>场景与反馈</strong> 搭建弧形倒挂道路和飞越五辆车的试驾场景，支持跟车及驾驶舱视角；用喷气、轮胎和落地音效配合粒子效果，反馈车辆当前的运动状态。</p>
+                <p><strong>回放实现</strong> 按固定时间间隔记录车辆姿态、速度与喷气等状态，回放时通过帧间插值还原运动，保留助跑至落地的动作过程；支持暂停、进度调整及自由相机，便于从不同角度检查和录制动作。</p>
+                <p><strong>测试与交付</strong> 在 30、60、120 FPS 下回归操控输入与回放行为，检查重播、视角切换和界面显隐等交互；配置 GitHub Actions 自动测试与构建，完成 Windows 独立运行包和开源发布。</p>
               </div>
               <span class="project-toggle" aria-hidden="true">查看详情 <span>＋</span></span>
             </article>
             <article class="project-card" role="button" tabindex="0" aria-expanded="false" aria-controls="project-3-details" data-project-card>
               <div class="project-topline"><span>04</span><span>个人项目 · iOS 应用开发</span></div>
               <h3>统一快递取件 App（ParcelHub）</h3>
-              <p>针对取件信息分散的问题，评估平台接入条件并确定可落地方案，借助 AI 编程基于 SwiftUI 与 WebKit 开发 iOS 应用，接入淘宝待取清单并支持短信解析导入；设计跨来源去重与状态合并规则，避免异常读取覆盖本地记录，补充断网重试和登录失效恢复流程，通过自动化测试与网页交互验证。</p>
+              <p>将官方待取清单与用户导入的取件短信集中管理的 iOS 助手，统一查看待取包裹、取件凭证和历史记录，减少在不同入口反复查找信息的操作。</p>
               <div class="tag-row"><span>SwiftUI</span><span>WebKit</span><span>数据合并</span></div>
               <a class="project-repository" href="https://github.com/xef0805/ParcelHub" target="_blank" rel="noopener noreferrer" aria-label="统一快递取件 App（ParcelHub）的 GitHub 仓库（私有）↗">GitHub 仓库（私有）↗</a>
               <div class="project-details" id="project-3-details" hidden>
-                <p><strong>方案与接入</strong> 评估平台接入条件，基于 SwiftUI 与 WebKit 接入淘宝待取清单，支持短信解析导入。</p>
-                <p><strong>数据与可靠性</strong> 设计跨来源去重与状态合并规则，避免异常读取覆盖本地记录，补充断网重试和登录失效恢复流程。</p>
-                <p><strong>开发与验证</strong> 借助 AI 编程完成应用开发，通过自动化测试与网页交互验证。</p>
+                <p><strong>方案与接入</strong> 先核实各平台可读取的数据及跳转方式，再基于 SwiftUI 与 WebKit 开发应用。读取用户登录后的淘宝官方待取清单，并在官方页面展示动态身份码；其他驿站保留小程序入口，按实际接入能力提供功能。</p>
+                <p><strong>识别与去重</strong> 对用户粘贴的取件短信进行本机解析，提取快递公司、地点及取件码。优先按快递公司与完整运单号合并跨来源包裹，同时保留各来源的凭证；信息不足时采用保守匹配，存在歧义则提示补全。</p>
+                <p><strong>状态一致性</strong> 只有完整且校验通过的官方清单才参与同步；未登录、读取失败或清单未加载完整时保留本地记录。官方清单变空只更新对应来源的待取状态，手动标记已取的包裹也不会因平台更新延迟被反复恢复。</p>
+                <p><strong>异常与交互</strong> 针对断网或登录过期，以及微信不可用、链接失效等情况提供对应提示和恢复入口，失败时保留原绑定与包裹数据。剪贴板识别先征得用户确认，再预填导入表单；设置页逐级返回，并保存外观和语言偏好。</p>
+                <p><strong>验证与进展</strong> 0.7.3 版本通过 62 项 Node 测试和 4 项 Python 测试，覆盖识别、合并及异常保护等逻辑，并检查网页交互。新版 iPhone 原生界面、网络行为和微信跳转仍需编译安装后验收。</p>
               </div>
               <span class="project-toggle" aria-hidden="true">查看详情 <span>＋</span></span>
             </article>
