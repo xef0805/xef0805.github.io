@@ -98,26 +98,28 @@
               <span class="project-toggle" aria-hidden="true">查看详情 <span>＋</span></span>
             </article>
             <article class="project-card" role="button" tabindex="0" aria-expanded="false" aria-controls="project-2-details" data-project-card>
-              <div class="project-topline"><span>02</span><span>Aumovio · 车载交互</span></div>
-              <h3>车载投影 AI 互动游戏</h3>
-              <p>实现五子棋、24 点游戏核心逻辑，结合 CANoe 完成设备通信与控制，参与动画渲染及画面切换，并集成语音识别、语音合成和大模型对弈能力。</p>
-              <div class="tag-row"><span>CANoe</span><span>语音交互</span><span>大模型对弈</span></div>
+              <div class="project-topline"><span>02</span><span>个人项目 · 3D 游戏开发</span></div>
+              <h3>火箭助推跑车模拟游戏</h3>
+              <p>将驾驶玩法拆解为车辆运动、喷气控制与动作回放等模块，借助 AI 编程基于 Godot 完成开发，支持倒挂行驶、空中翻滚及自由视角回放；围绕操控手感与镜头交互持续调试，通过多帧率回归测试验证功能，并配置 GitHub Actions 自动测试与构建，完成 Windows 版本开源发布。</p>
+              <div class="tag-row"><span>Godot</span><span>物理操控</span><span>自动化构建</span></div>
+              <a class="project-repository" href="https://github.com/xef0805/Roadster2-simulator" target="_blank" rel="noopener noreferrer" aria-label="火箭助推跑车模拟游戏的 GitHub 仓库">GitHub 仓库 ↗</a>
               <div class="project-details" id="project-2-details" hidden>
-                <p><strong>核心逻辑</strong> 实现五子棋、24 点游戏核心逻辑，结合 CANoe 完成设备通信与控制。</p>
-                <p><strong>画面交互</strong> 参与动画渲染与画面切换。</p>
-                <p><strong>能力集成</strong> 集成语音识别、语音合成和大模型对弈能力。</p>
+                <p><strong>需求与设计</strong> 将驾驶玩法拆解为车辆运动、喷气控制与动作回放模块，借助 AI 编程基于 Godot 完成开发。</p>
+                <p><strong>功能与调试</strong> 实现倒挂行驶、空中翻滚及自由视角回放，围绕操控手感与镜头交互持续调试。</p>
+                <p><strong>验证与交付</strong> 通过多帧率回归测试验证功能，配置 GitHub Actions 自动测试与构建，完成 Windows 版本开源发布。</p>
               </div>
               <span class="project-toggle" aria-hidden="true">查看详情 <span>＋</span></span>
             </article>
             <article class="project-card" role="button" tabindex="0" aria-expanded="false" aria-controls="project-3-details" data-project-card>
-              <div class="project-topline"><span>03</span><span>Aumovio · 工程效率</span></div>
-              <h3>PDF 需求解析 Agent</h3>
-              <p>独立开发需求解析 Agent，将客户 PDF 文件批量转换为标准化 Markdown，提取并整理核心需求、技术指标与功能要求；通过触发逻辑自动调用对应脚本，串联文件转换、信息提取与需求整理流程，便于后续查阅和使用。</p>
-              <div class="tag-row"><span>Python</span><span>Agent</span><span>Markdown</span></div>
+              <div class="project-topline"><span>03</span><span>个人项目 · iOS 应用开发</span></div>
+              <h3>统一快递取件 App（ParcelHub）</h3>
+              <p>针对取件信息分散的问题，评估平台接入条件并确定可落地方案，借助 AI 编程基于 SwiftUI 与 WebKit 开发 iOS 应用，接入淘宝待取清单并支持短信解析导入；设计跨来源去重与状态合并规则，避免异常读取覆盖本地记录，补充断网重试和登录失效恢复流程，通过自动化测试与网页交互验证。</p>
+              <div class="tag-row"><span>SwiftUI</span><span>WebKit</span><span>数据合并</span></div>
+              <a class="project-repository" href="https://github.com/xef0805/ParcelHub" target="_blank" rel="noopener noreferrer" aria-label="统一快递取件 App（ParcelHub）的 GitHub 仓库（私有）↗">GitHub 仓库（私有）↗</a>
               <div class="project-details" id="project-3-details" hidden>
-                <p><strong>文档处理</strong> 将客户 PDF 文件批量转换为标准化 Markdown。</p>
-                <p><strong>需求提取</strong> 提取并整理核心需求、技术指标与功能要求。</p>
-                <p><strong>流程串联</strong> 通过触发逻辑自动调用对应脚本，串联文件转换、信息提取与需求整理流程，便于后续查阅和使用。</p>
+                <p><strong>方案与接入</strong> 评估平台接入条件，基于 SwiftUI 与 WebKit 接入淘宝待取清单，支持短信解析导入。</p>
+                <p><strong>数据与可靠性</strong> 设计跨来源去重与状态合并规则，避免异常读取覆盖本地记录，补充断网重试和登录失效恢复流程。</p>
+                <p><strong>开发与验证</strong> 借助 AI 编程完成应用开发，通过自动化测试与网页交互验证。</p>
               </div>
               <span class="project-toggle" aria-hidden="true">查看详情 <span>＋</span></span>
             </article>
@@ -170,8 +172,12 @@
           toggle.firstChild.textContent = expanded ? "收起详情 " : "查看详情 ";
         };
 
-        card.addEventListener("click", () => setExpanded(card.getAttribute("aria-expanded") !== "true"));
+        card.addEventListener("click", (event) => {
+          if (event.target.closest("a")) return;
+          setExpanded(card.getAttribute("aria-expanded") !== "true");
+        });
         card.addEventListener("keydown", (event) => {
+          if (event.target.closest("a")) return;
           if (event.key === "Enter" || event.key === " ") {
             event.preventDefault();
             setExpanded(card.getAttribute("aria-expanded") !== "true");
